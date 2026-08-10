@@ -1,127 +1,381 @@
-<div class="module-grid">
-  <article class="module-card module-card-active">
-    <div class="module-icon" aria-hidden="true">A</div>
-    <div>
-      <p class="module-status">Disponibile</p>
-      <h2>Carta intestata</h2>
-      <p>Applica una carta intestata istituzionale a un documento Word mantenendo il contenuto originale.</p>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SPIQ - Strumenti per la produzione di documenti istituzionali">
+  <title>SPIQ</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <button class="brand" type="button" data-route="home" aria-label="Vai alla home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>SPIQ</strong>
+          <small>Strumenti per la documentazione</small>
+        </span>
+      </button>
+
+      <span class="privacy-pill">Elaborazione locale nel browser</span>
     </div>
-    <button class="primary-button" type="button" data-route="letterhead">Apri lo strumento</button>
-  </article>
+  </header>
 
-  <article class="module-card module-card-active">
-    <div class="module-icon" aria-hidden="true">AA</div>
-    <div>
-      <p class="module-status">Disponibile</p>
-      <h2>Attestati di autoapprendimento</h2>
-      <p>Genera un attestato di autoapprendimento a partire da uno o più documenti relativi all'attività formativa.</p>
-      <p class="module-note">Richiede l’accesso al workspace ChatGPT UniBG.</p>
-    </div>
-    <a
-      class="primary-button"
-      href="https://chatgpt.com/g/g-6a7a0c265a1081a494c7493e588c3567-spiq-autoapprendimento"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Genera attestato</a>
-  </article>
-</div>
-</section>
+  <main class="shell main-area">
 
-<section id="view-letterhead" class="view" aria-labelledby="letterhead-title">
-  <button class="back-button" type="button" data-route="home">← Torna agli strumenti</button>
+    <section id="view-home" class="view is-active" aria-labelledby="home-title">
 
-  <div class="page-heading">
-    <p class="eyebrow">Modulo 1</p>
-    <h1 id="letterhead-title">Carta intestata</h1>
-    <p>Carica un documento Word, scegli la carta intestata e genera una nuova copia con intestazione e piè di pagina istituzionali.</p>
-  </div>
+      <div class="hero">
+        <p class="eyebrow">Suite documentale</p>
 
-  <div class="workflow-card">
-    <section class="workflow-step" aria-labelledby="step-file-title">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h2 id="step-file-title">Carica il documento</h2>
-        <p>Formato supportato: Microsoft Word `.docx`.</p>
+        <h1 id="home-title">
+          Crea documenti istituzionali in pochi passaggi.
+        </h1>
 
-        <label id="drop-zone" class="drop-zone" for="source-file">
-          <input
-            id="source-file"
-            type="file"
-            accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        <p class="hero-copy">
+          SPIQ raccoglie strumenti per semplificare la predisposizione
+          della documentazione istituzionale.
+        </p>
+      </div>
+
+      <div class="module-grid">
+
+        <!-- MODULO CARTA INTESTATA -->
+
+        <article class="module-card module-card-active">
+
+          <div class="module-icon" aria-hidden="true">A</div>
+
+          <div>
+            <p class="module-status">Disponibile</p>
+
+            <h2>Carta intestata</h2>
+
+            <p>
+              Applica una carta intestata istituzionale a un documento
+              Word mantenendo il contenuto originale.
+            </p>
+          </div>
+
+          <button
+            class="primary-button"
+            type="button"
+            data-route="letterhead"
           >
-          <span class="drop-icon" aria-hidden="true">↑</span>
-          <strong>Trascina qui il file Word</strong>
-          <span>oppure clicca per selezionarlo</span>
-          <span id="file-name" class="file-name"></span>
-        </label>
+            Apri lo strumento
+          </button>
+
+        </article>
+
+
+        <!-- MODULO AUTOAPPRENDIMENTO -->
+
+        <article class="module-card module-card-active">
+
+          <div class="module-icon" aria-hidden="true">AA</div>
+
+          <div>
+            <p class="module-status">Disponibile</p>
+
+            <h2>Attestati di autoapprendimento</h2>
+
+            <p>
+              Genera un attestato di autoapprendimento a partire
+              da uno o più documenti relativi all'attività formativa.
+            </p>
+
+            <p class="module-note">
+              Richiede l’accesso al workspace ChatGPT UniBG.
+            </p>
+          </div>
+
+          <a
+            class="primary-button"
+            href="https://chatgpt.com/g/g-6a7a0c265a1081a494c7493e588c3567-spiq-autoapprendimento"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Genera attestato
+          </a>
+
+        </article>
+
       </div>
+
     </section>
 
-    <section class="workflow-step" aria-labelledby="step-template-title">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h2 id="step-template-title">Scegli la carta intestata</h2>
-        <p>Seleziona il modello da applicare al documento.</p>
 
-        <div
-          id="template-list"
-          class="template-list"
-          role="radiogroup"
-          aria-label="Carte intestate"
-        >
-          <div class="loading-row">Caricamento dei modelli…</div>
-        </div>
-      </div>
-    </section>
+    <!-- MODULO CARTA INTESTATA -->
 
-    <section class="workflow-step" aria-labelledby="step-format-title">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h2 id="step-format-title">Scegli il formato</h2>
-
-        <div class="format-grid">
-          <label class="format-option selected">
-            <input type="radio" name="output-format" value="docx" checked>
-            <span>
-              <strong>Word (.docx)</strong>
-              <small>Documento modificabile</small>
-            </span>
-          </label>
-
-          <label class="format-option is-disabled" aria-disabled="true">
-            <input type="radio" name="output-format" value="pdfa" disabled>
-            <span>
-              <strong>PDF/A</strong>
-              <small>Disponibile in una fase successiva</small>
-            </span>
-            <span class="badge">Prossimamente</span>
-          </label>
-        </div>
-      </div>
-    </section>
-
-    <section class="generate-area">
-      <div>
-        <strong>Il file viene elaborato sul tuo dispositivo.</strong>
-        <p>Nessun documento viene caricato o conservato da SPIQ.</p>
-      </div>
+    <section
+      id="view-letterhead"
+      class="view"
+      aria-labelledby="letterhead-title"
+    >
 
       <button
-        id="generate-button"
-        class="primary-button large"
+        class="back-button"
         type="button"
-        disabled
+        data-route="home"
       >
-        Genera documento
+        ← Torna agli strumenti
       </button>
-    </section>
-  </div>
 
-  <div
-    id="status-box"
-    class="status-box"
-    role="status"
-    aria-live="polite"
-    hidden
-  ></div>
-</section>
+
+      <div class="page-heading">
+
+        <p class="eyebrow">Modulo 1</p>
+
+        <h1 id="letterhead-title">
+          Carta intestata
+        </h1>
+
+        <p>
+          Carica un documento Word, scegli la carta intestata
+          e genera una nuova copia con intestazione e piè di pagina
+          istituzionali.
+        </p>
+
+      </div>
+
+
+      <div class="workflow-card">
+
+        <!-- STEP 1 -->
+
+        <section
+          class="workflow-step"
+          aria-labelledby="step-file-title"
+        >
+
+          <div class="step-number">1</div>
+
+          <div class="step-content">
+
+            <h2 id="step-file-title">
+              Carica il documento
+            </h2>
+
+            <p>
+              Formato supportato: Microsoft Word `.docx`.
+            </p>
+
+            <label
+              id="drop-zone"
+              class="drop-zone"
+              for="source-file"
+            >
+
+              <input
+                id="source-file"
+                type="file"
+                accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              >
+
+              <span
+                class="drop-icon"
+                aria-hidden="true"
+              >
+                ↑
+              </span>
+
+              <strong>
+                Trascina qui il file Word
+              </strong>
+
+              <span>
+                oppure clicca per selezionarlo
+              </span>
+
+              <span
+                id="file-name"
+                class="file-name"
+              ></span>
+
+            </label>
+
+          </div>
+
+        </section>
+
+
+        <!-- STEP 2 -->
+
+        <section
+          class="workflow-step"
+          aria-labelledby="step-template-title"
+        >
+
+          <div class="step-number">2</div>
+
+          <div class="step-content">
+
+            <h2 id="step-template-title">
+              Scegli la carta intestata
+            </h2>
+
+            <p>
+              Seleziona il modello da applicare al documento.
+            </p>
+
+            <div
+              id="template-list"
+              class="template-list"
+              role="radiogroup"
+              aria-label="Carte intestate"
+            >
+
+              <div class="loading-row">
+                Caricamento dei modelli…
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- STEP 3 -->
+
+        <section
+          class="workflow-step"
+          aria-labelledby="step-format-title"
+        >
+
+          <div class="step-number">3</div>
+
+          <div class="step-content">
+
+            <h2 id="step-format-title">
+              Scegli il formato
+            </h2>
+
+            <div class="format-grid">
+
+              <label class="format-option selected">
+
+                <input
+                  type="radio"
+                  name="output-format"
+                  value="docx"
+                  checked
+                >
+
+                <span>
+
+                  <strong>
+                    Word (.docx)
+                  </strong>
+
+                  <small>
+                    Documento modificabile
+                  </small>
+
+                </span>
+
+              </label>
+
+
+              <label
+                class="format-option is-disabled"
+                aria-disabled="true"
+              >
+
+                <input
+                  type="radio"
+                  name="output-format"
+                  value="pdfa"
+                  disabled
+                >
+
+                <span>
+
+                  <strong>
+                    PDF/A
+                  </strong>
+
+                  <small>
+                    Disponibile in una fase successiva
+                  </small>
+
+                </span>
+
+                <span class="badge">
+                  Prossimamente
+                </span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- GENERAZIONE -->
+
+        <section class="generate-area">
+
+          <div>
+
+            <strong>
+              Il file viene elaborato sul tuo dispositivo.
+            </strong>
+
+            <p>
+              Nessun documento viene caricato o conservato da SPIQ.
+            </p>
+
+          </div>
+
+          <button
+            id="generate-button"
+            class="primary-button large"
+            type="button"
+            disabled
+          >
+            Genera documento
+          </button>
+
+        </section>
+
+      </div>
+
+
+      <div
+        id="status-box"
+        class="status-box"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="shell">
+      SPIQ · Suite documentale
+    </div>
+
+  </footer>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"
+  ></script>
+
+  <script
+    type="module"
+    src="js/app.js"
+  ></script>
+
+</body>
+</html>
