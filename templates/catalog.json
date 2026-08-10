@@ -1,0 +1,11 @@
+[
+  {"id":"direttore-generale","label":"Direttore Generale","file":"Direttore_Generale.docx"},
+  {"id":"generica-ateneo","label":"Generica Ateneo","file":"Generica_Ateneo.docx"},
+  {"id":"presidio-qualita","label":"Presidio della Qualità","file":"Presidio_della_Qualita.docx"},
+  {"id":"rettore","label":"Rettore","file":"Rettore.docx"},
+  {"id":"servizio-aq","label":"Servizio Assicurazione della Qualità","file":"Servizio_Assicurazione_della_Qualita.docx"},
+  {"id":"servizio-performance","label":"Servizio Performance e Controllo di Gestione","file":"Servizio_Performance_e_Controllo_di_Gestione.docx"},
+  {"id":"servizio-didattica","label":"Servizio Progettazione offerta didattica","file":"Servizio_Progettazione_offerta_didattica.docx"},
+  {"id":"servizio-statistiche","label":"Servizio Statistiche e Reporting","file":"Servizio_Statistiche_e_Reporting.docx"},
+  {"id":"settore-strategia","label":"Settore Strategia, Programmazione Integrata e Qualità","file":"Settore_Strategia_Programmazione_Integrata_e_Qualita.docx"}
+]
